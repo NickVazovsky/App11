@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App11.Views.PersoneOrder"
+             Title="Персональный заказ">
+    <ScrollView>
+        <StackLayout>
+        <Image Source="{Binding Image}"
+               Aspect="AspectFill"
+               HeightRequest="200"/>
+            <Label Text="Заполните формы ниже"
+               HorizontalOptions="CenterAndExpand"
+               FontSize="Medium"
+               Margin="0,5,0,-2"/>
+            <Label Text="и мы свяжемся с Вами"
+               FontSize="Medium"
+               Margin="0,-3,0,5"
+               HorizontalOptions="CenterAndExpand"/>
+            <Label Text="Ваше имя:"
+               HorizontalOptions="CenterAndExpand"
+               FontSize="18"/>
+            <Entry Placeholder="Имя"
+               HorizontalOptions="CenterAndExpand"
+               WidthRequest="200"/>
+            <Label Text="Номер телефона:"
+               FontSize="18"
+               HorizontalOptions="CenterAndExpand"/>
+            <Entry Placeholder="+74953555513"
+               WidthRequest="200"
+               HorizontalOptions="CenterAndExpand"
+               />
+            <Label Text="Комментарии к заказу:"
+               FontSize="18"
+               HorizontalOptions="CenterAndExpand"/>
+            <Editor
+               WidthRequest="200"
+               HorizontalOptions="CenterAndExpand"/>
+            <Button Text="Прикрепить фото"
+                TextColor="Blue"
+                BorderColor="Transparent"
+                BackgroundColor="Transparent"
+                Scale="1"
+                FontSize="13"/>
+            <StackLayout>
+                <Button Text="Отправить заявку на заказ"
+                    BorderColor="#500069"
+                    BackgroundColor="#500069"
+                    TextColor="White"
+                    HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+  
+    </StackLayout>
+    </ScrollView>
+</ContentPage>

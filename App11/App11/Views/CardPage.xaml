@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+             x:Class="App11.Views.CardPage"
+             Title="{Binding Titles}">
+    <ScrollView>
+        <StackLayout>
+                 
+      
+            <StackLayout Orientation="Vertical">
+                <controls:CarouselViewControl Orientation="Horizontal" 
+                                      InterPageSpacing="10" 
+                                      VerticalOptions="FillAndExpand"
+                                      ItemSource="{Binding}"
+                                      HorizontalOptions="FillAndExpand"
+                                      x:Name="carousel">
+                    <controls:CarouselViewControl.ItemTemplate>
+                        <DataTemplate>
+                         <Image Source="{Binding Path=Images}"
+                                    Aspect="AspectFill"   
+                                       />
+                        </DataTemplate>
+                    </controls:CarouselViewControl.ItemTemplate>
+                </controls:CarouselViewControl>
+                <Label Text="{Binding Path=Titles}"
+    FontSize="Medium"
+    HorizontalOptions="CenterAndExpand"
+    VerticalOptions="Fill"/>
+                <Label x:Name="header" Text="Количество:0" FontSize="Large"
+                       HorizontalOptions="CenterAndExpand"/>
+                <Stepper Minimum="0" Maximum="5"  ValueChanged="OnStepperValueChanged"
+                         HorizontalOptions="CenterAndExpand"/>
+                <Label x:Name="price" Text="{Binding Path=Prices}"
+    FontSize="Medium"
+    HorizontalOptions="CenterAndExpand"
+    VerticalOptions="Fill"/>
+                <Label Text="Описание товара:"
+               FontSize="Medium"
+               FontFamily="Bold"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand"/>
+                <Label Text="{Binding Path=Descs}"
+    FontSize="Medium"
+    HorizontalOptions="FillAndExpand"
+    VerticalOptions="Fill"/>
+
+            </StackLayout>
+
+        
+            
+                <Label Text="Похожие товары:"
+               FontSize="Medium"
+               FontFamily="Bold"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand"/>
+            <StackLayout Orientation="Horizontal">
+                   <StackLayout HorizontalOptions="FillAndExpand">
+                    <Image Source="{Binding Image}"
+                   WidthRequest="100"
+                   HeightRequest="100"
+                   HorizontalOptions="FillAndExpand"/>
+                    <Label Text="Подсолнухи"
+                           HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="1300 рублей"
+                           HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="FillAndExpand">
+                    <Image Source="{Binding Image}"
+                   WidthRequest="100"
+                   HeightRequest="100"
+                   HorizontalOptions="FillAndExpand"/>
+                    <Label Text="Подсолнухи"
+                           HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="1300 рублей"
+                           HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Добавить в корзину"
+    HorizontalOptions="FillAndExpand"
+    Command ="{Binding OpenBasket}"/>
+                <Button Text="Купить в один клик"
+    HorizontalOptions="FillAndExpand"
+    Command ="{Binding OpenBasket}"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

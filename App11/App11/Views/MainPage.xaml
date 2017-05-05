@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App11.Views.MainPage"
+             Title="Магазин"
+             BackgroundColor="{StaticResource BackgroundColor}"
+           
+             >
+    <StackLayout>
+        <Label Text="Популярные товары:"
+               FontSize="Medium"
+               Margin="0,4,0,2"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand"/>
+        <ListView x:Name="ListView"
+                  ItemsSource="{Binding}"
+                  ItemSelected="OnListViewItemSelected"
+                  HasUnevenRows="True"
+                    RowHeight="200"
+                  >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Vertical">
+                                <Image Source="{Binding Images}"
+                                    Aspect="AspectFit"
+                                       Margin="0,5,0,0"
+                                       />
+                                <StackLayout VerticalOptions="CenterAndExpand" Spacing="5">
+                                    <Label Text="{Binding Titles}"
+                                           HorizontalOptions="CenterAndExpand"
+                                           FontSize="Medium"
+                                            Margin="0,5,0,5" />
+
+                                    <Label Text="{Binding Prices}"
+                                           FontSize="Medium"
+                                           HorizontalOptions="CenterAndExpand"
+                                           VerticalOptions="FillAndExpand"
+                                            Margin="0,2,0,5" />
+                                    <BoxView
+                                        WidthRequest="1"
+                                        HeightRequest="1"
+                                        Color="Black"
+                                        Margin="105,0,105,0"/>
+                                    <BoxView
+                                        WidthRequest="1"
+                                        HeightRequest="1"
+                                        Color="Black"
+                                        Margin="125,0,125,15"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

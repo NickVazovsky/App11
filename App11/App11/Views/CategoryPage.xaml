@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App11.Views.CategoryPage">
+    <StackLayout>
+        <ScrollView>
+            <ListView x:Name="ListViewz"
+                  ItemsSource="{Binding Categorys}"
+                  ItemTapped="ListView_OnItemTapped"
+                  HasUnevenRows="True"
+                  RowHeight="500"
+			      HorizontalOptions="Center"
+			      VerticalOptions="StartAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+
+                                <StackLayout Orientation="Vertical">
+                                    <Image  
+                                   Source="{Binding Image}"
+                                   Aspect="AspectFill"
+                                HorizontalOptions="FillAndExpand">
+
+                                    </Image>
+
+                                    <Label x:Name="Label" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" HeightRequest="40"
+                                    Text="{Binding Title}" TextColor="Black" Margin="0,-145,0,90" FontSize="Medium"
+                                      />
+
+
+                                </StackLayout>
+
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

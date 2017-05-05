@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App11.Views.ShopPage"
+             Title="Магазин">
+
+   
+            <ListView x:Name="ListViews"
+                  ItemsSource="{Binding Shops}"
+                  ItemTapped="ListView_OnItemTapped"
+                  HasUnevenRows="True"
+			      HorizontalOptions="FillAndExpand"
+			      VerticalOptions="FillAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+
+                                <StackLayout Orientation="Vertical">
+                                    <Image  
+                                   Source="{Binding Image}"
+                                   Aspect="AspectFill"
+                                HorizontalOptions="FillAndExpand">
+
+                                    </Image>
+
+                                    <Label x:Name="labels" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" HeightRequest="40"
+                                    Text="{Binding Title}" TextColor="White" Margin="0,-145,0,95" FontSize="Medium"
+                                    
+                                />
+
+
+                                </StackLayout>
+
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+
+</ContentPage>

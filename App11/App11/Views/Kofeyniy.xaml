@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App11.Views.Kofeyniy"
+             Title="Кофейный">
+    <StackLayout Orientation="Vertical">
+        <Image Source="cha11.gif"
+               HorizontalOptions="FillAndExpand"
+             
+                                       />
+        <Button Text="Кофейный"/>
+        <Entry Placeholder="....."/>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App11.Views.HistoryPage"
+          
+             Title="История">
+    <ScrollView>
+        <StackLayout VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand">
+      
+            <Image Source="{Binding Image}"
+               Aspect="AspectFill"/>
+            <Label Text="{Binding Title}"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand"
+               FontSize="Medium"
+               TextColor="Black"/>
+            <Label Text="{Binding Descript}"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand"/>
+            <Label Text="{Binding Title2}"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="Medium"
+                   TextColor="Black"/>
+            <Label Text="{Binding Descript2}"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand"/>
+
+            <StackLayout Orientation="Horizontal">
+                <Button
+                Command="{Binding OpenShop}"
+                Text="Перейти в магазин"
+                TextColor="White"
+                BackgroundColor="#500069"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                />
+            </StackLayout>
+
+        </StackLayout>
+    
+    </ScrollView>
+</ContentPage>

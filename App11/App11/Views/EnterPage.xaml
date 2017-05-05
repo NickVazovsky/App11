@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App11.Views.EnterPage"
+             BackgroundImage="cha11.gif"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <StackLayout Padding="10" Spacing="5">
+        <StackLayout Orientation="Vertical"
+                     Padding="8" Spacing="20">
+            <Image Source="logo.png"
+                   WidthRequest="179"
+                   HeightRequest="158"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center">
+            </Image>
+
+        </StackLayout>
+        <StackLayout Padding="4">
+            
+            <Label Text="Логин"
+             TextColor="White"
+               HorizontalOptions="CenterAndExpand"
+               FontSize="Medium"/>
+            <Entry Text="vazovsky12"
+                Placeholder="...."
+               HorizontalOptions="CenterAndExpand"
+               WidthRequest="200"
+               TextColor="White"
+               />
+            <Label Text="Пароль"
+               FontSize="Medium"
+               TextColor="White"
+               HorizontalOptions="CenterAndExpand"/>
+            <Entry Text="Password" 
+            Placeholder="..."
+               IsPassword="True"
+               HorizontalOptions="CenterAndExpand"
+               WidthRequest="200"
+               TextColor="White"
+               />
+            <Image Source="Enters.png">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OpenEnter}">
+
+                    </TapGestureRecognizer>
+                </BoxView.GestureRecognizers>
+            </Image>
+        </StackLayout>
+        <StackLayout>
+            <Button Text="Зарегистрироваться"
+                TextColor="White"
+                Command="{Binding OpenDetail}"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                BorderColor="Transparent"
+                BackgroundColor="Transparent"
+                Scale="1"
+                FontSize="13"
+       />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

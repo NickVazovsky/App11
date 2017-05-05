@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App11.Views.ServizePage"
+             Title="Сервизы">
+
+
+            <ListView x:Name="ListView"
+                  ItemsSource="{Binding Servize}"
+                  ItemTapped="ListView_OnItemTapped"
+                  HasUnevenRows="True"
+          VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+
+                                <StackLayout Orientation="Vertical">
+                                    <Image  
+                                   Source="{Binding Image}"
+                                   Aspect="AspectFill"
+                                HorizontalOptions="FillAndExpand">
+
+                                    </Image>
+
+                                    <Label x:Name="Label" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" HeightRequest="40"
+                      Text="{Binding Title}" TextColor="White" Margin="0,-145,0,90" FontSize="Medium"
+                                      />
+
+
+                                </StackLayout>
+
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+</ContentPage>

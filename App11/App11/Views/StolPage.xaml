@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             x:Class="App11.Views.StolPage"
+             Title="Столовые сервизы">
+    <StackLayout>
+        <ScrollView>
+            <flv:FlowListView x:Name="flowListView" FlowColumnCount="2"  HasUnevenRows="True"
+			FlowItemTappedCommand="{Binding ItemTappedCommand}" FlowLastTappedItem="{Binding LastTappedItem}" 
+			FlowItemsSource="{Binding Stols}" >
+
+                <flv:FlowListView.FlowColumnTemplate>
+
+                    <DataTemplate>
+                        <Grid Padding="3">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+
+                            <Image HeightRequest="170" 
+                                  Aspect="AspectFill"
+                                   Source="{Binding Images}">
+
+                            </Image>
+                            <Label x:Name="Label" HorizontalOptions="Fill" HorizontalTextAlignment="Center" VerticalOptions="End"
+                        BackgroundColor="Silver" Opacity="0.5" Text="{Binding nameImages}" TextColor="Black"/>
+                            
+
+
+                        </Grid>
+
+                    </DataTemplate>
+                </flv:FlowListView.FlowColumnTemplate>
+
+
+            </flv:FlowListView>
+
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

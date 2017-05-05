@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:infra="clr-namespace:App11.Infrastructure;assembly=App11"
+             x:Class="App11.App">
+	<Application.Resources>
+        <ResourceDictionary>
+            <!--Colors -->
+            <!-- General colors -->
+            <Color x:Key="MainColor">#ff3b77</Color>
+            <Color x:Key="FontColor">#52656b</Color>
+            <Color x:Key="AccentColor1">#cdff00</Color>
+            <Color x:Key="AccentColor2">#b8b89f</Color>
+            <Color x:Key="BackgroundColor">#ffffff</Color>
+            <!-- Menu colors -->
+            <Color x:Key="MenuColor">#353340</Color>
+            <Color x:Key="MenuFontColor">#ffffff</Color>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="#1C2223"/>
+                <Setter Property="BarTextColor" Value="White"/>
+            </Style>
+
+            <!-- Locator -->
+            <infra:InstanceLocator x:Key="Locator"></infra:InstanceLocator>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
